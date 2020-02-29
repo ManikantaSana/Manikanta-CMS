@@ -1,0 +1,134 @@
+<div class="container mt-5">
+    <div class="row my-2">
+        <div class="col-lg-8 order-lg-2">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" data-target="#messages" data-toggle="tab" class="nav-link">Fee Details</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Placement Details</a>
+                </li>
+            </ul>
+            <div class="tab-content py-4">
+                <div class="tab-pane active" id="profile">
+                    <h5 class="mb-3">{{this.stu.fullname}}</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>About - </h6>
+                            <!-- <p>
+                                Web Designer, UI/UX Engineer
+                            </p>
+                            <h6>Hobbies</h6>
+                            <p>
+                                Indie music, skiing and hiking. I love the great outdoors.
+                            </p> -->
+                            <table class="table table-user-information">
+                                <tbody>
+                                  <tr>
+                                    <td>Graduation Branch:</td>
+                                    <td>{{this.stu.gbranch}}</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Graduation YOJ:</td>
+                                    <td>{{this.stu.gyear}}</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Date of Birth</td>
+                                    <td>{{this.stu.date}}</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Gender</td>
+                                    <td>{{this.stu.gender}}</td>
+                                  </tr>
+                                    <tr>
+                                    <td>Home Address</td>
+                                    <td>{{this.stu.city}}</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Email</td>
+                                    <td>{{this.stu.email}}</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Phone Number</td>
+                                    <td>{{this.stu.phonenumber}}</td>
+                                       
+                                  </tr>
+                                 
+                                </tbody>
+                              </table>
+                        </div>
+                        
+                       
+                    </div>
+                    <!--/row-->
+                </div>
+                <div class="tab-pane" id="messages">
+                    <div class="alert alert-info alert-dismissable">
+                        <a class="panel-close close" data-dismiss="alert">×</a> Here are  <strong>Fee</strong>details till last updated.
+                    </div>
+                    <table class="table">
+                        <thead>
+                          
+                            <!-- <th>Branch</th> -->
+                            <th>Student Name</th>
+                            <th>Student ID</th>
+                            <th>Total Fee</th>
+                            <th>Fee Paid</th>
+                            <th>Due</th>
+                       </thead>
+                       <tr>
+                       
+                           
+                            <td>{{this.data.name}}</td>
+                            <td>{{this.data.studentid}}</td>
+                            <td>{{this.data.totalfee}}</td>
+                            <td>{{this.data.feepaid}}</td>
+                            <td>{{this.data.due}}</td>
+                           </tr>
+                      
+                    </table>
+                </div>
+                <div class="tab-pane" id="edit">
+                    <table class="table">
+                        <thead>
+                          
+                            <th>Branch</th>
+                            <th>Company Name</th>
+                            <th>Job Description</th>
+                            <th>Requirments</th>
+                            <th>Job Role</th>
+                            <th>No.Of Interviews</th>
+                            <th>No.Of Vacancies</th>
+                            <th>Package Details</th>   
+                       </thead>
+                       <tr *ngFor="let m of data1">
+                       
+                            <td>{{this.data1.gbranch}}</td>
+                            <td>{{this.data1.companyname}}</td>
+                            <td>{{this.data1.jobdescription}}</td>
+                            <td>{{this.data1.requirments}}</td>
+                            <td>{{this.data1.jobrole}}</td>
+                            <td>{{this.data1.noofinterviewround}}</td>
+                            <td>{{this.data1.noofvacancies}}</td>
+                            <td>{{this.data1.packagedetails}}</td>
+                           </tr>
+                      
+                    </table>
+                    
+                </div>
+                    
+            </div>
+        </div>
+        <div class="col-lg-4 order-lg-1 text-center">
+            <i class="fas fa-user-graduate" style="width: 150px; height: 150px;"></i>
+            <h6 class="mt-2">Upload a different photo</h6>
+            <label class="custom-file">
+                <input type="file" id="file" class="custom-file-input">
+                <span class="custom-file-control btn btn-dark">Click Here</span>
+            </label>
+        </div>
+    </div>
+</div>

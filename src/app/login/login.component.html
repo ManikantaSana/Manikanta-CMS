@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+        
+                    <h1>Login</h1>
+                    
+                   <form #formRef="ngForm" (ngSubmit)="submitData(formRef.value)" >
+            
+                    <p class="btn-switch">					
+                      <input type="radio" id="yes" name="role" class="btn-switch__radio btn-switch__radio_yes" value="admin" ngModel/>
+                      <input type="radio" checked id="no" name="role" class="btn-switch__radio btn-switch__radio_no" value="student" ngModel/>		
+                      <label for="yes" class="btn-switch__label btn-switch__label_yes"><span class="btn-switch__txt">Admin</span></label>								  
+                      <label for="no" class="btn-switch__label btn-switch__label_no"><span class="btn-switch__txt">Student</span></label>							
+                    </p>
+            
+            <!-- username -->
+                    <div class="textbox">
+                        <i class="fas fa-user"></i>
+                      <input type="text" name="username" id="un" class="form-control" autocomplete="off" ngModel placeholder="username" style="text-align: center;">
+                    </div>
+                  
+            <!-- Password -->
+                    <div class="textbox">
+                      <i class="fas fa-lock"></i>
+                      <input type="password" name="password" id="p" class="form-control" autocomplete="off" ngModel placeholder="password" style="text-align: center;">
+                    </div>
+                  
+                    <input type="button"  type="submit" class="btn" value="Login">
+                
+                </form>
+              </div>
+       
+    </div>
+</div>
+
+<div class="col-4"></div>
+
+  <router-outlet></router-outlet>
+
+
